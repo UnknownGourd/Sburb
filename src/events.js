@@ -191,9 +191,11 @@ events.gameState = function(info) {
 //check if the player is nudging the game forward (space or mouse)
 //syntax: none
 events.nudge = function(info){
+	Sburb.pressed[Sburb.Keys.space] = false;
+
 	this.reset = function(){ } //do nothing
 	this.checkCompletion = function(){
-		return Sburb.Keys.space || Sburb.Mouse.down;
+		return Sburb.pressed[Sburb.Keys.space] || Sburb.Mouse.down;
 	}
 }
 

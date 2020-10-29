@@ -541,7 +541,8 @@ function hasControl(){
 		&& !Sburb.chooser.choosing 
 		&& !Sburb.destRoom  
 		&& !Sburb.fading 
-		&& !Sburb.destFocus;
+		&& !Sburb.destFocus
+		&& Sburb.waitFor == null;
 }
 
 function focusCamera(){

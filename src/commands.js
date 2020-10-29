@@ -477,7 +477,7 @@ commands.changeRoomRemote = function(info){
 //Teleport to a room which may not have been loaded yet
 //syntax: filepath, roomName, newCharacterX, newCharacterY
 commands.teleportRemote = function(info){
-    if(Sburb.loadingRoom) return; Sburb.loadingRoom = true; //Only load one room at a time
+    if(Sburb.loadingRoom) return; //Only load one room at a time
 	commands.changeRoomRemote(info);
 	
 	Sburb.playEffect(Sburb.effects["teleportEffect"],Sburb.char.x,Sburb.char.y);
